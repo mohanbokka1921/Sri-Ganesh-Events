@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Bookings</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin-bookings.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo1">
+            <img
+            src="assets/images/logo.png"
+            width="70">
+        </div>
+
+        <div class="logo">
+            Sri Ganesh Events
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="admin-dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="admin-bookings.html">
+                    Bookings
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html">
+                    Website
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Heading -->
+
+    <section>
+
+        <h1>
+            Booking Management
+        </h1>
+
+        <!-- Dashboard Cards -->
+
+        <div class="dashboard-cards">
+
+            <div class="dashboard-card">
+
+                <h2 id="totalBookings">
+                    0
+                </h2>
+
+                <p>
+                    Total Bookings
+                </p>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h2 id="pendingBookings">
+                    0
+                </h2>
+
+                <p>
+                    Pending
+                </p>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h2 id="confirmedBookings">
+                    0
+                </h2>
+
+                <p>
+                    Confirmed
+                </p>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h2 id="completedBookings">
+                    0
+                </h2>
+
+                <p>
+                    Completed
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <input
+            type="text"
+            id="searchBooking"
+            placeholder="Search by Name or Phone">
+
+        </div>
+
+        <!-- Bookings Table -->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Customer</th>
+
+                        <th>Phone</th>
+
+                        <th>Event Date</th>
+
+                        <th>Location</th>
+
+                        <th>Decoration Code</th>
+
+                        <th>Status</th>
+
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="bookingsTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>
+            Sri Ganesh Events
+        </h3>
+
+        <p>
+            Admin Booking Management Panel
+        </p>
+
+    </footer>
+
+    <script src="js/admin-bookings.js"></script>
+
+</body>
+
+</html>

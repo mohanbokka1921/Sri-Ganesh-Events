@@ -1,0 +1,499 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:12px 5%;
+
+    background:#111;
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    border-bottom:1px solid rgba(212,175,55,.3);
+}
+
+.logo{
+    color:#d4af37;
+    font-size:28px;
+    font-weight:700;
+}
+
+.logo1 img{
+    border-radius:50%;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:.3s;
+    position:relative;
+}
+
+.nav-links a:hover{
+    color:#d4af37;
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-5px;
+
+    width:0;
+
+    height:2px;
+
+    background:#d4af37;
+
+    transition:.4s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.75)
+    ),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    color:white;
+    animation:fadeUp 1.2s ease;
+}
+
+.hero-content h1{
+
+    font-size:70px;
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+}
+
+.hero-content p{
+
+    font-size:22px;
+
+    color:#f5f5f5;
+
+    margin-bottom:30px;
+}
+
+.hero-buttons button{
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    margin:10px;
+
+    background:#d4af37;
+
+    color:#111;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.4s;
+}
+
+.hero-buttons button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 10px 25px
+    rgba(212,175,55,.4);
+}
+
+.outline-btn{
+
+    background:transparent !important;
+
+    color:#d4af37 !important;
+
+    border:2px solid #d4af37 !important;
+}
+
+.outline-btn:hover{
+
+    background:#d4af37 !important;
+
+    color:#111 !important;
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.search-section{
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    background:#181818;
+}
+
+.search-section h2{
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+}
+
+.search-section input{
+
+    width:70%;
+
+    max-width:700px;
+
+    padding:15px;
+
+    border-radius:50px;
+
+    border:2px solid #d4af37;
+
+    background:#111;
+
+    color:white;
+
+    font-size:16px;
+}
+
+.search-section input:focus{
+
+    outline:none;
+
+    box-shadow:
+    0 0 15px
+    rgba(212,175,55,.4);
+}
+
+/* ===========================
+   CATEGORIES
+=========================== */
+
+.categories{
+
+    padding:80px 5%;
+
+    text-align:center;
+}
+
+.categories h2{
+
+    margin-bottom:40px;
+
+    color:#d4af37;
+}
+
+.category-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+}
+
+.category-card{
+
+    background:#1c1c1c;
+
+    color:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(212,175,55,.3);
+
+    transition:.4s;
+}
+
+.category-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    border-color:#d4af37;
+
+    box-shadow:
+    0 10px 25px
+    rgba(212,175,55,.25);
+}
+
+/* ===========================
+   PRODUCTS
+=========================== */
+
+.featured{
+
+    padding:80px 5%;
+}
+
+.featured h2{
+
+    text-align:center;
+
+    color:#d4af37;
+
+    margin-bottom:40px;
+}
+
+.products{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+}
+
+.product-card{
+
+    background:#1a1a1a;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(212,175,55,.2);
+
+    transition:.4s;
+}
+
+.product-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+    0 15px 30px
+    rgba(212,175,55,.25);
+}
+
+.product-card img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.product-card:hover img{
+
+    transform:scale(1.08);
+}
+
+.product-card h3,
+.product-card p{
+
+    color:white;
+
+    margin:15px;
+}
+
+.product-card button{
+
+    margin:15px;
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#d4af37;
+
+    color:#111;
+
+    cursor:pointer;
+
+    font-weight:600;
+}
+
+/* ===========================
+   WHY US
+=========================== */
+
+.why-us{
+
+    padding:80px 5%;
+
+    text-align:center;
+}
+
+.why-us h2{
+
+    color:#d4af37;
+
+    margin-bottom:40px;
+}
+
+.features{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:30px;
+}
+
+.feature{
+
+    background:#1a1a1a;
+
+    padding:40px;
+
+    min-width:250px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(212,175,55,.3);
+
+    transition:.4s;
+}
+
+.feature:hover{
+
+    transform:
+    translateY(-10px);
+}
+
+.feature h3{
+
+    color:#d4af37;
+}
+
+/* ===========================
+   REVIEWS
+=========================== */
+
+.reviews{
+
+    padding:80px 5%;
+
+    text-align:center;
+}
+
+.reviews h2{
+
+    color:#d4af37;
+
+    margin-bottom:40px;
+}
+
+.review-card{
+
+    background:#1a1a1a;
+
+    max-width:700px;
+
+    margin:auto;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(212,175,55,.3);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:#0f0f0f;
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    margin-top:50px;
+
+    border-top:1px solid rgba(212,175,55,.2);
+}
+
+footer h3{
+
+    color:#d4af37;
+
+    margin-bottom:15px;
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(60px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+    }
+}

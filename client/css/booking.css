@@ -1,0 +1,108 @@
+/* ===========================
+   BOOKING PAGE
+=========================== */
+
+body{
+    background:#121212;
+    color:#ffffff;
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+h1{
+    color:#d4af37;
+    text-align:center;
+    margin-bottom:30px;
+    font-size:42px;
+}
+
+/* Form Container */
+
+#bookingForm{
+    width:100%;
+    max-width:600px;
+    background:#1b1b1b;
+    padding:40px;
+    border-radius:25px;
+    border:1px solid rgba(212,175,55,.25);
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.4);
+    animation:fadeUp 1s ease;
+}
+
+/* Inputs */
+
+#bookingForm input{
+    width:100%;
+    padding:15px;
+    background:#111;
+    color:white;
+    border:1px solid #333;
+    border-radius:12px;
+    outline:none;
+    transition:.3s;
+}
+
+#bookingForm input:focus{
+    border-color:#d4af37;
+    box-shadow:
+    0 0 15px rgba(212,175,55,.25);
+}
+
+/* Button */
+
+#bookingForm button{
+    width:100%;
+    padding:16px;
+    background:#d4af37;
+    color:#121212;
+    border:none;
+    border-radius:50px;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.4s;
+}
+
+#bookingForm button:hover{
+    transform:translateY(-4px);
+    box-shadow:
+    0 12px 25px rgba(212,175,55,.4);
+}
+
+/* Success Message */
+
+#message{
+    text-align:center;
+    margin-top:20px;
+    color:#f5d76e;
+    font-weight:600;
+    font-size:18px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    body{
+        padding:15px;
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    #bookingForm{
+        padding:25px;
+    }
+
+}
+
+.booking-wrapper{
+    width:100%;
+    max-width:700px;
+}

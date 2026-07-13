@@ -1,0 +1,388 @@
+/* =========================
+   ADMIN BOOKINGS PAGE
+========================= */
+
+section{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:60px 5%;
+
+}
+
+section h1{
+
+    text-align:center;
+
+    font-size:50px;
+
+    margin-bottom:40px;
+
+    color:#d4af37;
+
+}
+
+/* =========================
+   TABLE CONTAINER
+========================= */
+
+.table-container{
+
+    overflow-x:auto;
+
+}
+
+/* =========================
+   TABLE
+========================= */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:#1a1a1a;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 30px
+    rgba(0,0,0,.4);
+
+}
+
+/* =========================
+   TABLE HEADER
+========================= */
+
+thead{
+
+    background:#111;
+
+}
+
+th{
+
+    color:#d4af37;
+
+    padding:18px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    border-bottom:
+    1px solid rgba(212,175,55,.3);
+
+}
+
+/* =========================
+   TABLE BODY
+========================= */
+
+td{
+
+    padding:16px;
+
+    text-align:center;
+
+    color:#ffffff;
+
+    border-bottom:
+    1px solid rgba(255,255,255,.05);
+
+}
+
+tbody tr{
+
+    transition:.3s;
+
+}
+
+tbody tr:hover{
+
+    background:#252525;
+
+    transform:scale(1.01);
+
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+
+.status-pending{
+
+    background:#ff9800;
+
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.status-confirmed{
+
+    background:#4caf50;
+
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.status-completed{
+
+    background:#2196f3;
+
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.status-cancelled{
+
+    background:#f44336;
+
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.action-btn{
+
+    background:#d4af37;
+
+    color:#121212;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.action-btn:hover{
+
+    transform:
+    translateY(-3px);
+
+    box-shadow:
+    0 10px 20px
+    rgba(212,175,55,.3);
+
+}
+
+.delete-btn{
+
+    background:#e53935;
+
+    color:white;
+
+}
+
+.delete-btn:hover{
+
+    box-shadow:
+    0 10px 20px
+    rgba(229,57,53,.3);
+
+}
+
+/* =========================
+   BOOKING COUNT CARDS
+========================= */
+
+.dashboard-cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    margin-bottom:40px;
+
+}
+
+.dashboard-card{
+
+    background:#1a1a1a;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    border:
+    1px solid rgba(212,175,55,.2);
+
+    transition:.3s;
+
+}
+
+.dashboard-card:hover{
+
+    transform:
+    translateY(-8px);
+
+}
+
+.dashboard-card h2{
+
+    font-size:40px;
+
+    color:#d4af37;
+
+}
+
+.dashboard-card p{
+
+    color:#cccccc;
+
+    margin-top:10px;
+
+}
+
+/* =========================
+   SEARCH BAR
+========================= */
+
+.search-box{
+
+    width:100%;
+
+    margin-bottom:30px;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:50px;
+
+    border:
+    1px solid rgba(212,175,55,.3);
+
+    background:#1a1a1a;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+.search-box input:focus{
+
+    outline:none;
+
+    border-color:#d4af37;
+
+    box-shadow:
+    0 0 15px
+    rgba(212,175,55,.2);
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    section h1{
+
+        font-size:35px;
+
+    }
+
+    table{
+
+        min-width:900px;
+
+    }
+
+}
+
+.accept-btn{
+    background:#28a745;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+    margin:2px;
+}
+
+.complete-btn{
+    background:#007bff;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+    margin:2px;
+}
+
+.delete-btn{
+    background:#dc3545;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+    margin:2px;
+}
+
+.accept-btn:hover,
+.complete-btn:hover,
+.delete-btn:hover{
+    opacity:.85;
+}

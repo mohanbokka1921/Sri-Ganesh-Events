@@ -1,0 +1,211 @@
+/* =========================
+   SERVICE PAGE
+========================= */
+
+.service-hero{
+
+    min-height:50vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.8),
+    rgba(0,0,0,.8)
+    ),
+
+    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1600")
+    center/cover;
+
+}
+
+.service-hero-content{
+
+    animation:
+    fadeUp 1.2s ease;
+
+}
+
+.service-hero h1{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+.service-hero p{
+
+    font-size:20px;
+
+    color:#fff;
+
+}
+
+/* Sections */
+
+section{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:60px 5%;
+
+}
+
+section h2{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+section p{
+
+    text-align:center;
+
+    line-height:1.8;
+
+}
+
+/* Images */
+
+section img{
+
+    display:block;
+
+    margin:25px auto;
+
+    border-radius:20px;
+
+    border:
+    3px solid #d4af37;
+
+    transition:.4s;
+
+}
+
+section img:hover{
+
+    transform:
+    scale(1.05);
+
+    box-shadow:
+    0 15px 35px
+    rgba(212,175,55,.3);
+
+}
+
+/* Lists */
+
+ul,
+ol{
+
+    max-width:800px;
+
+    margin:auto;
+
+}
+
+ul li,
+ol li{
+
+    margin:12px 0;
+
+    padding:15px;
+
+    background:#1b1b1b;
+
+    border-left:
+    4px solid #d4af37;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+ul li:hover,
+ol li:hover{
+
+    transform:
+    translateX(10px);
+
+}
+
+/* FAQ */
+
+h4{
+
+    color:#d4af37;
+
+    margin-top:25px;
+
+    text-align:center;
+
+}
+
+/* Divider */
+
+hr{
+
+    border:none;
+
+    height:1px;
+
+    width:80%;
+
+    margin:20px auto;
+
+    background:
+    rgba(212,175,55,.2);
+
+}
+
+/* Service Card Effect */
+
+section{
+
+    background:#161616;
+
+    margin-top:30px;
+
+    border-radius:20px;
+
+    border:
+    1px solid rgba(212,175,55,.15);
+
+    transition:.4s;
+
+}
+
+section:hover{
+
+    transform:
+    translateY(-5px);
+
+}
+
+/* Footer */
+
+footer{
+
+    text-align:center;
+
+    padding:40px;
+
+    margin-top:50px;
+
+    border-top:
+    1px solid rgba(212,175,55,.2);
+
+}

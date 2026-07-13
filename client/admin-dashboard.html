@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+</head>
+<body>
+
+<h1>Flora Events Admin Dashboard</h1>
+
+<button id="logoutBtn">
+Logout
+</button>
+
+<a href="admin-bookings.html">
+    View Bookings
+</a>
+
+<hr>
+
+<h2>Add Decoration</h2>
+
+<form id="decorationForm">
+
+    <h2>Decoration Details</h2>
+
+    <input
+    type="text"
+    id="code"
+    placeholder="Product Code"
+    required>
+
+    <br><br>
+
+    <input
+    type="text"
+    id="title"
+    placeholder="Title like Royal Wedding"
+    required>
+
+    <br><br>
+
+    <select id="category" required>
+
+        <option value="">
+            Select Category
+        </option>
+
+        <option value="Marriage">
+            Marriage
+        </option>
+
+        <option value="Reception">
+           Reception
+        </option>
+
+        <option value="Haldi">
+            Haldi
+        </option>
+
+        <option value="Birthday">
+            Birthday
+        </option>
+
+        <option value="Temple">
+            Temple
+        </option>
+
+        <option value="Mandapam">
+            Mandapam
+        </option>
+
+        <option value="Bed">
+            First Night Bed
+        </option>
+
+        <option value="Car">
+            Car Decoration
+        </option>
+
+        <option value="Garland">
+            Garland
+        </option>
+
+    </select>
+
+    <br><br>
+
+    <input
+    type="number"
+    id="price"
+    placeholder="Price"
+    required>
+
+    <br><br>
+
+    <textarea
+    id="description"
+    placeholder="Description"></textarea>
+
+    <br><br>
+
+    <input
+    type="text"
+    id="flowersUsed"
+    placeholder="Rose,Orchid,Lily">
+
+    <br><br>
+
+    <input
+    type="text"
+    id="materialsUsed"
+    placeholder="LED,Fabric">
+
+    <br><br>
+
+    <input
+    type="file"
+    id="imageFile">
+
+    <br><br>
+
+    <button id="saveBtn" type="submit">
+    Save Decoration
+</button>
+
+</form>
+
+<p id="message"></p>
+
+
+<hr>
+
+<h2>All Decorations</h2>
+
+<table border="1" width="100%">
+
+    <thead>
+
+        <tr>
+
+            <th>Code</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Actions</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody id="decorationsTable">
+
+    </tbody>
+
+</table>
+
+<script src="js/admin-dashboard.js"></script>
+
+</body>
+</html>

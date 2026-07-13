@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Decoration</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div>
+    <h1>Book Decoration</h1>
+    <form id="bookingForm">
+
+     <input
+        type="text"
+        id="customerName"
+        placeholder="Full Name"
+        required>
+
+        <br><br>
+
+        <input
+        type="tel"
+        id="phone"
+        placeholder="Phone Number"
+        required>
+
+        <br><br>
+
+        <input
+        type="text"
+        id="location"
+        placeholder="Event Location"
+        required>
+
+        <br><br>
+
+        <input
+        type="date"
+        id="eventDate"
+        required>
+
+        <input
+        type="hidden"
+        id="decorationId">
+
+        <br><br>
+
+        <button type="submit">
+            Confirm Booking
+        </button>
+
+    </form>
+
+    <p id="message"></p>
+
+</div>
+
+<script src="js/booking.js"></script>
+
+</body>
+</html>

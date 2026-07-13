@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SriGanesh Events</title>
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class logo1><img src="assets\images\logo.png" width="80px"></div>
+        <div class="logo">🌸 Sri Ganesh Events</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="admin-login.html">Admin</a></li>
+            <li><a href="developer.html">Developer</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Luxury Flower Decorations</h1>
+            <p>Making Every Celebration Beautiful & Memorable</p>
+
+            <div class="hero-buttons">
+                <button onclick="location.href='#productsContainer'">
+                    View Decorations
+                </button>
+
+                <button class="outline-btn"
+                onclick="location.href='booking.html'">
+                    Book Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search -->
+    <section class="search-section">
+        <h2>Find Your Decoration</h2>
+
+        <input
+            type="text"
+            placeholder="Search Marriage, Birthday, Temple..."
+            id="searchInput"
+        >
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+
+        <h2>Decoration Categories</h2>
+
+        <div class="category-grid">
+
+            <a href="category.html?type=Marriage">
+                <div class="category-card">Marriage</div>
+            </a>
+
+            <a href="category.html?type=Reception">
+                <div class="category-card">Reception</div>
+            </a>
+
+            <a href="category.html?type=Haldi">
+                <div class="category-card">Haldi</div>
+            </a>
+
+            <a href="category.html?type=Birthday">
+                <div class="category-card">Birthday</div>
+            </a>
+
+            <a href="category.html?type=Temple">
+                <div class="category-card">Temple</div>
+            </a>
+
+            <a href="category.html?type=Mandapam">
+                <div class="category-card">Mandapam</div>
+            </a>
+
+            <a href="category.html?type=Bed">
+                <div class="category-card"> First Night Bed</div>
+            </a>
+
+            <a href="category.html?type=Car">
+                <div class="category-card">Car Decoration</div>
+            </a>
+
+            <a href="category.html?type=Garland">
+                <div class="category-card">Garland</div>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Featured Products From MongoDB -->
+    <section class="featured">
+
+        <h2>Featured Decorations</h2>
+
+        <div
+        id="productsContainer"
+        class="products">
+
+        </div>
+
+    </section>
+
+    <!-- Why Us -->
+    <section class="why-us">
+
+        <h2>Why Choose Us?</h2>
+
+        <div class="features">
+
+            <div class="feature">
+                <h3>1000+</h3>
+                <p>Events Completed</p>
+            </div>
+
+            <div class="feature">
+                <h3>Premium</h3>
+                <p>Fresh Flowers</p>
+            </div>
+
+            <div class="feature">
+                <h3>24/7</h3>
+                <p>Customer Support</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+
+        <h2>Customer Reviews</h2>
+
+        <div class="review-card">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>
+                Amazing decoration and professional service.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>Sri Ganesh Events</h3>
+
+        <p>
+            Creating Beautiful Memories Since 2026
+        </p>
+
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+
+</body>
+</html>
