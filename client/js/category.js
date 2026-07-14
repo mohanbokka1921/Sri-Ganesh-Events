@@ -17,7 +17,7 @@ async function loadCategoryProducts(){
 
         const response =
         await fetch(
-        "http://localhost:5000/api/decorations"
+        "http://sri-ganesh-events-ap.onrender.com/api/decorations"
         );
 
         const decorations =
@@ -55,7 +55,7 @@ async function loadCategoryProducts(){
             <div class="product-card">
 
                 <img
-                src="http://localhost:5000${item.images[0]}"
+                src="http://sri-ganesh-events-ap.onrender.com${item.images[0]}"
                 width="250">
 
                 <h3>${item.title}</h3>

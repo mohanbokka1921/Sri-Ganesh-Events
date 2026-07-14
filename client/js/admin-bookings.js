@@ -8,7 +8,7 @@ async function loadBookings() {
 
         const response =
         await fetch(
-        "http://localhost:5000/api/bookings"
+        "http://sri-ganesh-events-ap.onrender.com/api/bookings"
         );
 
         const bookings =
@@ -232,7 +232,7 @@ async function updateBookingStatus(
 
         await fetch(
 
-        `http://localhost:5000/api/bookings/${id}`,
+        `http://sri-ganesh-events-ap.onrender.com/api/bookings/${id}`,
 
         {
 
@@ -276,7 +276,7 @@ async function deleteBooking(id){
 
         await fetch(
 
-        `http://localhost:5000/api/bookings/${id}`,
+        `http://sri-ganesh-events-ap.onrender.com/api/bookings/${id}`,
 
         {
             method:"DELETE"
