@@ -53,7 +53,7 @@ async (e) => {
 
     const decorationResponse =
         await fetch(
-            "http://sri-ganesh-events-ap.onrender.com/api/decorations"
+            "https://sri-ganesh-events-ap.onrender.com/api/decorations"
         );
 
         const decorations =
@@ -68,7 +68,7 @@ async (e) => {
 
         const response =
         await fetch(
-        "http://sri-ganesh-events-ap.onrender.com/api/bookings",
+        "https://sri-ganesh-events-ap.onrender.com/api/bookings",
         {
             method: "POST",
 

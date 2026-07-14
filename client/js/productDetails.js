@@ -9,7 +9,7 @@ async function loadProduct() {
     try {
 
         const response = await fetch(
-            "http://sri-ganesh-events-ap.onrender.com/api/decorations"
+            "https://sri-ganesh-events-ap.onrender.com/api/decorations"
         );
 
         const decorations =
@@ -35,7 +35,7 @@ async function loadProduct() {
 
         container.innerHTML = `
             <img
-            src="http://sri-ganesh-events-ap.onrender.com${product.images[0]}"
+            src="https://sri-ganesh-events-ap.onrender.com${product.images[0]}"
             width="500">
 
             <h1>${product.title}</h1>

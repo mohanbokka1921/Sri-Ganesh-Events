@@ -49,7 +49,7 @@ async (e) => {
 
             const uploadResponse =
             await fetch(
-                "http://sri-ganesh-events-ap.onrender.com/api/upload",
+                "https://sri-ganesh-events-ap.onrender.com/api/upload",
                 {
                     method: "POST",
                     body: formData
@@ -101,7 +101,7 @@ async (e) => {
         };
 
         let url =
-        "http://sri-ganesh-events-ap.onrender.com/api/decorations";
+        "https://sri-ganesh-events-ap.onrender.com/api/decorations";
 
         let method =
         "POST";
@@ -109,7 +109,7 @@ async (e) => {
         if(editId){
 
             url =
-            `http://sri-ganesh-events-ap.onrender.com/api/decorations/${editId}`;
+            `https://sri-ganesh-events-ap.onrender.com/api/decorations/${editId}`;
 
             method =
             "PUT";
@@ -176,7 +176,7 @@ async function loadDecorations() {
 
         const response =
         await fetch(
-        "http://sri-ganesh-events-ap.onrender.com/api/decorations"
+        "https://sri-ganesh-events-ap.onrender.com/api/decorations"
         );
 
         const decorations =
@@ -249,7 +249,7 @@ async function deleteDecoration(id) {
 
         await fetch(
 
-        `http://sri-ganesh-events-ap.onrender.com/api/decorations/${id}`,
+        `https://sri-ganesh-events-ap.onrender.com/api/decorations/${id}`,
 
         {
             method:"DELETE"
@@ -275,7 +275,7 @@ async function editDecoration(id) {
 
         const response =
         await fetch(
-        "http://sri-ganesh-events-ap.onrender.com/api/decorations"
+        "https://sri-ganesh-events-ap.onrender.com/api/decorations"
         );
 
         const decorations =

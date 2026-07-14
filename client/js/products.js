@@ -6,7 +6,7 @@ async function loadProducts() {
 
         const response =
         await fetch(
-        "http://sri-ganesh-events-ap.onrender.com/api/decorations"
+        "https://sri-ganesh-events-ap.onrender.com/api/decorations"
         );
 
         allProducts =
