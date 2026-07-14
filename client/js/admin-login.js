@@ -20,7 +20,7 @@ try{
 
 const response =
 await fetch(
-"http://sri-ganesh-events-ap.onrender.com/api/admin/login",
+"https://sri-ganesh-events-ap.onrender.com/api/admin/login",
 {
 method:"POST",
 
