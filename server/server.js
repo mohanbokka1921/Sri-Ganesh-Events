@@ -1,13 +1,9 @@
 require("dotenv").config();
 
-const express =
-require("express");
+const express = require("express");
+const cors = require("cors");
 
-const cors =
-require("cors");
-
-const connectDB =
-require("./config/db");
+const connectDB = require("./config/db");
 
 const decorationRoutes =
 require("./routes/decorationRoutes");
@@ -15,45 +11,56 @@ require("./routes/decorationRoutes");
 const uploadRoutes =
 require("./routes/uploadRoutes");
 
-const app =
-express();
+const adminRoutes =
+require("./routes/adminRoutes");
 
+const bookingRoutes =
+require("./routes/bookingRoutes");
+
+const app = express();
+
+// Connect MongoDB
 connectDB();
 
+// Middleware
 app.use(cors());
+app.use(express.json());
 
+// Home Route
+app.get("/", (req, res) => {
+    res.send("Server Running");
+});
+
+// Decoration Routes
 app.use(
-  express.json()
+    "/api/decorations",
+    decorationRoutes
 );
 
-app.get(
-  "/",
-  (req, res) => {
-    res.send(
-      "Server Running"
-    );
-  }
-);
-
+// Upload Routes
 app.use(
-  "/api/decorations",
-  decorationRoutes
+    "/api/upload",
+    uploadRoutes
 );
 
+// Admin Routes
 app.use(
-  "/api/upload",
-  uploadRoutes
+    "/api/admin",
+    adminRoutes
 );
 
+// Booking Routes
+app.use(
+    "/api/bookings",
+    bookingRoutes
+);
+
+// Start Server
 const PORT =
-process.env.PORT ||
-5000;
+process.env.PORT || 5000;
 
-app.listen(
-  PORT,
-  () => {
+app.listen(PORT, () => {
     console.log(
-      `Server running on ${PORT}`
+        `🚀 Server running on port ${PORT}`
     );
-  }
-);
+});
