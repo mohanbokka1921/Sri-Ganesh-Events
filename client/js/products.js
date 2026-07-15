@@ -1,12 +1,15 @@
 let allProducts = [];
 
+const API_URL =
+"https://sri-ganesh-events-ap.onrender.com";
+
 async function loadProducts() {
 
     try {
 
         const response =
         await fetch(
-        "https://sri-ganesh-events-ap.onrender.com/api/decorations"
+            `${API_URL}/api/decorations`
         );
 
         allProducts =
@@ -17,7 +20,10 @@ async function loadProducts() {
     }
     catch(error){
 
-        console.error(error);
+        console.error(
+            "Error loading products:",
+            error
+        );
 
     }
 
@@ -27,7 +33,7 @@ function displayProducts(products){
 
     const container =
     document.getElementById(
-    "productsContainer"
+        "productsContainer"
     );
 
     container.innerHTML = "";
@@ -43,14 +49,28 @@ function displayProducts(products){
 
     products.forEach(item => {
 
+        const imageUrl =
+
+        item.images &&
+        item.images.length > 0
+
+        ?
+
+        `${API_URL}${item.images[0]}`
+
+        :
+
+        "assets/images/image.png";
+
         container.innerHTML += `
 
         <div class="product-card">
 
             <img
-            src="http://localhost:5000${item.images[0]}"
-            alt="${item.title}"
-            width="250">
+                src="${imageUrl}"
+                alt="${item.title}"
+                width="250"
+            >
 
             <h3>${item.title}</h3>
 
