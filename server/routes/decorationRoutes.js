@@ -1,94 +1,86 @@
 const express = require("express");
-const router = express.Router();
+
+const router =
+express.Router();
 
 const Decoration =
 require("../models/Decoration");
 
-router.get("/", async (req,res)=>{
+const upload =
+require("../config/multer");
 
-    try{
+// GET ALL
 
-        const decorations =
-        await Decoration.find();
-        
-
-        res.json(decorations);
-
-    }
-    catch(error){
-
-        res.status(500).json({
-            message:error.message
-        });
-
-    }
-
-});
-
-module.exports = router;
-
-router.post("/", async (req, res) => {
+router.get(
+  "/",
+  async (req, res) => {
 
     try {
 
-        const decoration =
-        await Decoration.create(req.body);
+      const decorations =
+      await Decoration.find();
 
-        res.status(201).json(decoration);
-
-    }
-    catch(error){
-
-        console.log(error);
-
-        res.status(500).json({
-            message: "Error Creating Decoration"
-        });
+      res.json(
+        decorations
+      );
 
     }
+    catch (error) {
 
-});
+      res.status(500).json({
+        message:
+        error.message,
+      });
 
-router.delete("/:id", async (req, res) => {
+    }
+
+  }
+);
+
+// ADD DECORATION
+
+router.post(
+  "/",
+  upload.single("image"),
+  async (req, res) => {
 
     try {
 
-        await Decoration.findByIdAndDelete(
-            req.params.id
-        );
+      const decoration =
+      new Decoration({
 
-        res.json({
-            message:
-            "Decoration Deleted"
-        });
+        title:
+        req.body.title,
 
-    }
-    catch(error){
+        code:
+        req.body.code,
 
-        res.status(500).json(error);
+        price:
+        req.body.price,
 
-    }
+        image:
+        req.file.path,
 
-});
+      });
 
-router.put("/:id", async (req, res) => {
+      await decoration.save();
 
-    try {
-
-        const decoration =
-        await Decoration.findByIdAndUpdate(
-            req.params.id,
-            req.body,
-            { new: true }
-        );
-
-        res.json(decoration);
+      res.status(201).json(
+        decoration
+      );
 
     }
-    catch(error){
+    catch (error) {
 
-        res.status(500).json(error);
+      res.status(500).json({
+        message:
+        error.message,
+      });
 
     }
 
-});
+  }
+);
+
+module.exports =
+router;

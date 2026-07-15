@@ -34,9 +34,7 @@ async function loadProduct() {
         }
 
         container.innerHTML = `
-            <img
-            src="https://sri-ganesh-events-ap.onrender.com${product.images[0]}"
-            width="500">
+            <img src="${product.image}" alt="${product.title}">
 
             <h1>${product.title}</h1>
 

@@ -1,48 +1,30 @@
 const mongoose = require("mongoose");
 
-const decorationSchema = new mongoose.Schema({
-    code: {
-        type: String,
-        required: true,
-        unique: true
-    },
+const decorationSchema =
+new mongoose.Schema({
+  title: {
+    type: String,
+    required: true,
+  },
 
-    title: {
-        type: String,
-        required: true
-    },
+  code: {
+    type: String,
+    required: true,
+  },
 
-    category: {
-        type: String,
-        required: true
-    },
+  price: {
+    type: Number,
+    required: true,
+  },
 
-    price: {
-        type: Number,
-        required: true
-    },
-
-    images: {
-        type: [String],
-        default: []
-    },
-
-    description: {
-        type: String
-    },
-
-    flowersUsed: {
-        type: [String]
-    },
-
-    materialsUsed: {
-        type: [String]
-    }
-
-}, { timestamps: true });
+  image: {
+    type: String,
+    required: true,
+  },
+});
 
 module.exports =
 mongoose.model(
-    "Decoration",
-    decorationSchema
+  "Decoration",
+  decorationSchema
 );
